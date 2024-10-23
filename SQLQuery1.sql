@@ -1,0 +1,1 @@
+﻿ALTER TABLE STORES ADD Document narchar(50)
