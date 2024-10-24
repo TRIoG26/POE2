@@ -42,7 +42,8 @@ li a:hover {
   <li><a class="active" href="about.aspx">Track</a></li>
 </ul>
         </div>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="lecturer_id" DataSourceID="SqlDataSource2" Width="712px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Stores]"></asp:SqlDataSource>
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="lecturer_id" DataSourceID="SqlDataSource1">
             <Columns>
                 <asp:BoundField DataField="lecturer_id" HeaderText="lecturer_id" ReadOnly="True" SortExpression="lecturer_id" />
                 <asp:BoundField DataField="Lecturer_Name" HeaderText="Lecturer_Name" SortExpression="Lecturer_Name" />
@@ -53,10 +54,8 @@ li a:hover {
                 <asp:BoundField DataField="total" HeaderText="total" SortExpression="total" />
                 <asp:BoundField DataField="File_name" HeaderText="File_name" SortExpression="File_name" />
                 <asp:BoundField DataField="payrate" HeaderText="payrate" SortExpression="payrate" />
-                <asp:DynamicField DataField="PDF_FILE" HeaderText="PDF_FILE" />
             </Columns>
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Stores]"></asp:SqlDataSource>
     </form>
 </body>
 </html>

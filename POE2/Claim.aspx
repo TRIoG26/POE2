@@ -30,6 +30,22 @@ li a {
 li a:hover {
   background-color: #111;
 }
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            height: 23px;
+        }
+        .auto-style3 {
+            width: 143px;
+        }
+        .auto-style4 {
+            height: 23px;
+            width: 143px;
+        }
+        .auto-style5 {
+            color: #000000;
+        }
     </style>
 </head>
  <ul>
@@ -40,35 +56,69 @@ li a:hover {
 </ul>
 <body>
     <form id="form1" runat="server">
-        <asp:Label ID="Label6" runat="server" Text="Lecturer claim system"></asp:Label>
+        <strong>
+        <asp:Label ID="Label6" runat="server" Text="Lecturer claim system" CssClass="auto-style5"></asp:Label>
+        </strong>
         <br />
         <br />
-        <div NS>
-            <asp:Label ID="Label1" runat="server" Text="Lecturer Name:"></asp:Label>
-            <asp:TextBox ID="TextBox1" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox><br />
-            <asp:Label ID="Label2" runat="server" Text="Lecturer Surname:"></asp:Label>
-            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox><br />
-        </div>
-        <div class="MC">
-            <asp:Label ID="Label3" runat="server" Text="Module:"></asp:Label>
-            <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox><br />
-            <asp:Label ID="Label4" runat="server" Text="Course:"></asp:Label>
-            <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox><br />
-           <asp:Label ID="Label5" runat="server" Text="Hours:"></asp:Label>
-            <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
-            <br />
-            Payrate:<asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
-            <br />
-            <br />
-        </div>
-        <div class ="submit">
-            <input id="File1" type="file" />
-            <br />
-            <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" />
-            <asp:Button ID="Button2" runat="server" Text="Cancel" OnClick="Button2_Click" />
-        </div>
-        <p>
-            &nbsp;</p>
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style3">Lecturer Name:</td>
+                <td>
+                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3">Lecturer Last Name:</td>
+                <td>
+                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3">Lecturer ID:</td>
+                <td>
+                    <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3">Module:</td>
+                <td>
+                    <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style4">Course:</td>
+                <td class="auto-style2">
+                    <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3">Hours:</td>
+                <td>
+                    <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3">Payrate:</td>
+                <td>
+                    <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3">&nbsp;</td>
+                <td>
+                    <asp:FileUpload ID="FileUpload1" runat="server" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3">
+                    <asp:Button ID="Button1" runat="server" Text="Submit" />
+                    <asp:Button ID="Button2" runat="server" Text="Cancel" />
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+        <asp:Label ID="Label7" runat="server" Text="Message:"></asp:Label>
     </form>
 </body>
 </html>
